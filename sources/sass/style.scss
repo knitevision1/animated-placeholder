@@ -24,7 +24,6 @@ textarea {
     font-size: $input-font-size;
     color: #000;
     transition: border-color .15s ease-in-out;
-	line-height: 100%;
 
     &:focus {
         border-color: #484D51;
@@ -34,6 +33,7 @@ textarea {
 
 label.placeholder {
     position: relative;
+	display: inline-flex;
 
     &:after {
         display: flex;
