@@ -1,0 +1,68 @@
+//Sizes
+$input-side-padding: 14px;
+$input-font-size: 14px;
+$after-left: $input-side-padding + ($input-font-size / 2) + 4;
+
+//Colors
+$input-default-color: #8FACC0;
+
+//Transition
+$tf: ease;
+$tf-duration: 170ms;
+
+input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea {
+    padding: 13px $input-side-padding;
+    background-color: #fff;
+    border: 1px solid;
+    border-color: $input-default-color;
+    font-size: $input-font-size;
+    color: #000;
+    transition: border-color .15s ease-in-out;
+	line-height: 100%;
+
+    &:focus {
+        border-color: #484D51;
+        outline: none;
+    }
+}
+
+label.placeholder {
+    position: relative;
+
+    &:after {
+        display: flex;
+        align-items: center;
+
+        content: attr(data-placeholder);
+        position: absolute;
+        top:0;
+        right: 0;
+        bottom: 0;
+        left: $after-left;
+
+        font-size: 14px;
+        color: grey;
+        cursor: text;
+        transition: transform $tf-duration $tf, opacity $tf-duration $tf;
+        transform: translateX(0);
+        opacity: 1;
+		color: $input-default-color;
+    }
+
+    &.hidden {
+        &:after {
+            transform: translateX(40%);
+            opacity: 0;
+        }
+    }
+}
+
+body {
+	text-align: center;
+}

@@ -1,0 +1,51 @@
+input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea {
+  padding: 13px 14px;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #8FACC0;
+  font-size: 14px;
+  color: #000;
+  transition: border-color .15s ease-in-out;
+  line-height: 100%; }
+  input:focus,
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="number"]:focus,
+  input[type="tel"]:focus,
+  textarea:focus {
+    border-color: #484D51;
+    outline: none; }
+
+label.placeholder {
+  position: relative; }
+  label.placeholder:after {
+    display: flex;
+    align-items: center;
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 25px;
+    font-size: 14px;
+    color: grey;
+    cursor: text;
+    transition: transform 170ms ease, opacity 170ms ease;
+    transform: translateX(0);
+    opacity: 1;
+    color: #8FACC0; }
+  label.placeholder.hidden:after {
+    transform: translateX(40%);
+    opacity: 0; }
+
+body {
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
